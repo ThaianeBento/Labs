@@ -96,20 +96,10 @@ public class Utils {
 
     public static String retorno(int verificacao, String pivo){
         if (verificacao == -1){
-            return " ";
+            return "Não há prefixo comum";
         }
         int verificacaoAtualizada = verificacao + 1;
         return pivo.substring(0, verificacaoAtualizada);
-    }
-
-    public static <T> T medirTempoExecucaoComRetorno(Supplier<T> metodo) {
-        long inicio = System.nanoTime();
-        T resultado = metodo.get();
-        long fim = System.nanoTime();
-        long duracao = fim - inicio;
-
-        System.out.println("Tempo de execução: " + duracao + " ns (" + (duracao / 1000000.0) + " ms)");
-        return resultado;
     }
 
 }

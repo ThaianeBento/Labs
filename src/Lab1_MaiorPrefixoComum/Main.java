@@ -1,6 +1,7 @@
 package Lab1_MaiorPrefixoComum;
 
 import static Lab1_MaiorPrefixoComum.Utils.*;
+import static Util.Utils.medirTempoExecucaoComRetorno;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +10,7 @@ public class Main {
     }
 
     public static void caso1() {
-        String[] strings = Utils.GeradorArrayStrings(20000000);
+        String[] strings = Utils.GeradorArrayStrings(5);
         String pivot = strings[0];
 
         int resultado = medirTempoExecucaoComRetorno(() -> comparaTudo(strings,pivot));
@@ -17,7 +18,7 @@ public class Main {
     }
 
     public static void caso2(){
-        String[] strings = Utils.GeradorArrayStrings(20000000);
+        String[] strings = Utils.GeradorArrayStrings(5);
         Utils.ordenar(strings);
 
         String pivot = strings[0];
